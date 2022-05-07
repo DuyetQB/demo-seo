@@ -10,7 +10,7 @@ function Content() {
     fetch(`https://60b1dcdf62ab150017ae1584.mockapi.io/demo/traiga/${id}`).then((data)=>{
     return data.json()
     }).then((item)=>{ setData(item)}).catch((error)=>{console.log(error);})
-      },[])
+      },[id])
     
   return (
     <div>
@@ -22,7 +22,6 @@ function Content() {
                 <meta property="og:image" content={data.avatar} />
             </Helmet>
         <>
-        {console.log("data:",data)}
         <h3>{data.title}</h3>
         <img src={data.avatar} alt="" style={{width:"300px",height:"300px"}}/>
         <p>{data.details}</p>
