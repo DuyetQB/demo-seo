@@ -16,7 +16,7 @@ function Content() {
     <div>
        <Helmet>
                 <meta charSet="utf-8" />
-                <title>item title</title>
+                <title>{data.title}</title>
                 <link rel="canonical" href="http://mysite.com/example" />
                 <meta name="description" content={data.details} />
                 <meta property="og:image" content={data.avatar} />
